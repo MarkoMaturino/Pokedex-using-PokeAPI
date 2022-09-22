@@ -8,16 +8,11 @@
     color: yellow;
     text-shadow: 2px 2px blue;
 }
-.logo{
-    height: 100px;
-    width: 150px;
-}
 .pokemonPicture{
     height: 400px;
     width: 400px;
 }
 .pokemonPicAndName{
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;

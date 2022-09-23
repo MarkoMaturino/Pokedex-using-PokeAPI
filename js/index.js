@@ -1,4 +1,4 @@
-//Example fetch using pokemonapi.co
+
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -27,6 +27,7 @@ function getFetch(){
         document.querySelector(".pokemon").innerText =  capitalizeFirstLetter(data.name)
         document.querySelector('.pokemonPicture').src  = data.sprites.other["official-artwork"]["front_default"]
         document.querySelector(".pokemonType").innerText = pokemonTypes
+        document.querySelector(".pokemonMoves").innerHTML = ""
         document.querySelector('.pokemonMoves').appendChild(makeUL(pokemonMoves))
       })
       .catch(err => {

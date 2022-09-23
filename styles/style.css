@@ -10,8 +10,8 @@
     text-shadow: 2px 2px blue;
 }
 .pokemonPicture{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 .pokemonPicAndName{
     display: flex;

@@ -11,11 +11,10 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
-  
+        const pokemonTypes = data.types.map(x => capitalizeFirstLetter(x.type.name)).join("/")
         document.querySelector(".pokemon").innerText =  capitalizeFirstLetter(data.name)
         document.querySelector('.pokemonPicture').src  = data.sprites.other["official-artwork"]["front_default"]
-        
+  
       })
       .catch(err => {
           console.log(`error ${err}`)

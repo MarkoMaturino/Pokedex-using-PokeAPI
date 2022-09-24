@@ -22,8 +22,7 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         const pokemonTypes = data.types.map(x => capitalizeFirstLetter(x.type.name)).join("/")
-        const pokemonMoves = data.moves.map(x=> x.move.name)
-      
+        const pokemonMoves = data.moves.map(x=> x.version_group_details[0].level_learned_at + ':' + x.move.name ) 
         document.querySelector(".pokemon").innerText =  capitalizeFirstLetter(data.name)
         document.querySelector('.pokemonPicture').src  = data.sprites.other["official-artwork"]["front_default"]
         document.querySelector(".pokemonType").innerText = ` Type:${pokemonTypes}`

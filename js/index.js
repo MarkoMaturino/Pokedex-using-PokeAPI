@@ -26,7 +26,7 @@ function getFetch(){
       
         document.querySelector(".pokemon").innerText =  capitalizeFirstLetter(data.name)
         document.querySelector('.pokemonPicture').src  = data.sprites.other["official-artwork"]["front_default"]
-        document.querySelector(".pokemonType").innerText = pokemonTypes
+        document.querySelector(".pokemonType").innerText = ` Type:${pokemonTypes}`
         document.querySelector(".pokemonMoves").innerHTML = ""
         document.querySelector('.pokemonMoves').appendChild(makeUL(pokemonMoves))
       })
